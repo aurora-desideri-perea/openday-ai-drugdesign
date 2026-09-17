@@ -30,7 +30,7 @@ app = Flask(__name__, static_folder=str(ROOT))
 
 @app.route("/")
 def index():
-    return send_from_directory(str(ROOT), "app_webcam_v2.html")
+    return send_from_directory(str(ROOT / "html"), "app_webcam_v2.html")
 
 
 @app.route("/imgs/<path:filename>")
